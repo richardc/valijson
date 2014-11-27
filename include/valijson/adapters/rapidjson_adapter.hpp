@@ -760,11 +760,10 @@ inline RapidJsonObjectMemberIterator RapidJsonObject::find(
     const rapidjson::Value::ConstMemberIterator
         itr = value.FindMember(propertyName.c_str());
 
-    return itr ? itr : value.MemberEnd();
+    return itr;
 }
 
 }  // namespace adapters
 }  // namespace valijson
 
 #endif
-
